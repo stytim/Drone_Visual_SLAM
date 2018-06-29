@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+  <name>ardrone_joystick</name>
+  <version>0.0.0</version>
+  <description>ardrone_telepo</description>
+
+
+  <maintainer email="alvinx1202@gmail.com">Alvin Li</maintainer>
+
+  <license>TODO</license>
+
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>std_msgs</build_depend>
+
+</package>

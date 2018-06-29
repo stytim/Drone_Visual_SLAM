@@ -1,0 +1,6 @@
+<launch>
+	<param name="robot_description" command="$(find xacro)/xacro --inorder $(find cvg_sim_gazebo)/urdf/quadrotor.urdf.xacro" />
+	<node pkg="edumip_my_robot_gazebo_ros" type="edumip_my_robot_state_publisher_hw6" name="edumip_my_robot_state_publisher_hw6" />
+	<node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find edumip_my_robot_gazebo_ros)rviz/edumip_gazebo_rviz_hw6.rviz" />
+</launch>

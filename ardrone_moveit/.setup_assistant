@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: ""
+    relative_path: /home/tim/ardrone_simulator/src/mini_ar_drone.urdf
+  SRDF:
+    relative_path: config/ar_drone.srdf
+  CONFIG:
+    author_name: Tianyu Song
+    author_email: tsong11@jhu.edu
+    generated_timestamp: 1525582584

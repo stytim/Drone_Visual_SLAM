@@ -1,0 +1,12 @@
+<launch>
+  
+  <!-- Publish point cloud from file -->
+  <node pkg="point_cloud_io" type="read" name="read" output="screen">
+    <param name="file_path" value="$(find point_cloud_io)/examples/pc_1.2.ply" />
+    <param name="topic"     value="/point_cloud" />
+    <param name="frame"     value="world" />
+    <param name="rate"      value="1.0" />
+  </node>
+    
+    
+</launch>

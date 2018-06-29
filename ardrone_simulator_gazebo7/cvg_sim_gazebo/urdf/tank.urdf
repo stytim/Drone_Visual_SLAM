@@ -1,0 +1,27 @@
+<robot name="tanke_model">
+  <link name="tank_body">
+    <inertial>
+      <mass value="1.0" />
+      <!-- center of mass (com) is defined w.r.t. link local coordinate system -->
+      <origin xyz="0.25 -0.5 0" />
+      <inertia  ixx="1.0" ixy="0.0"  ixz="0.0"  iyy="1.0"  iyz="0.0"  izz="1.0" />
+    </inertial>
+    <visual>
+      <!-- visual origin is defined w.r.t. link local coordinate system -->
+      <origin xyz="0 0 0" rpy="3.1416 0 0" />
+      <geometry>
+        <mesh filename="tank.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </visual>
+    <collision>
+      <!-- collision origin is defined w.r.t. link local coordinate system -->
+      <origin xyz="0 0 0" rpy="3.1416 0 0" />
+      <geometry>
+        <mesh filename="package://cvg_sim_gazebo/meshes/tank.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="tank_body">
+    <material>Gazebo/LightWood</material>
+  </gazebo>
+</robot>

@@ -1,0 +1,14 @@
+launch>
+	<arg name="image" default="/ardrone/front/image_raw" />
+	<arg name="camera_info" default="/ardrone/front/camera_info" />
+	<arg name="lsd_world_frame" default="world" />
+	<!-- <arg name="image" default="/logitechC310/camera/image_rect" />
+	<arg name="camera_info" default="/logitechC310/camera/camera_info" /> -->
+
+	<node name="lsd_slam_display" pkg="lsd_slam_viewer" type="viewer" output="screen"/>
+	<node name="lsd_slam" pkg="lsd_slam_core" type="live_slam" respawn="true" output="screen" args="image:=$(arg image) camera_info:=$(arg camera_info) lsd_world_frame:=$(arg lsd_world_frame)"/>
+
+	<!-- <node name="cloud_transform" pkg="tf" type="static_transform_publisher" args="0 0 0 0 -0.70710678 0.70710678 0 /map /cloud_frame 10"/> -->
+    <!--    <node name="world_transform" pkg="tf" type="static_transform_publisher" args="0 0 0 0 -0.70710678 0.70710678 0 /map /world 10"/>-->
+	
+</launch>
